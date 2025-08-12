@@ -26,7 +26,7 @@ const Header: React.FC = () => {
         }
 
         .left a[data-active="true"] {
-          color: blue;
+          color: gray;
         }
 
         a + a {
