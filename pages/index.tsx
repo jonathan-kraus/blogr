@@ -9,14 +9,14 @@ import prisma from '../lib/prisma';
   const feed = await prisma.post.findMany({
     where: { published: true },
     include: {
-      author: {
+      author: { 
         select: { name: true },
       },
     },
   });
   return {
     props: { feed },
-    revalidate: 10,
+    revalidate: 11,
   };
 };
 
