@@ -12,8 +12,9 @@ datasource db {
 model Post {
   id        String     @default(cuid()) @id
   title     String
+  updatedAt DateTime @default(now())
   content   String?
-  published Boolean @default(false)
+  published Boolean @default(true)
   author    User?   @relation(fields: [authorId], references: [id])
   authorId  String?
 }
