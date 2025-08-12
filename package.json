@@ -12,12 +12,10 @@
   "license": "MIT",
   "dependencies": {
     "@prisma/client": "^6.13.0",
-    "@vercel/analytics": "^1.5.0",
-    "@vercel/speed-insights": "^1.2.0",
     "next": "12.0.10",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-markdown": "8.0.0"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-markdown": "^8.0.0"
   },
   "devDependencies": {
     "@types/node": "17.0.14",
