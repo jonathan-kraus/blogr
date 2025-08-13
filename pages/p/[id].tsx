@@ -15,7 +15,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
         select: { name: true },
       },
       updatedBy: {
-        select: { name: true },
+        
       },
     },
   });
