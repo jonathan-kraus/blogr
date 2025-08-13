@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import Header from "./Header";
-import { SpeedInsights } from '@vercel/speed-insights/next';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 type Props = {
   children: ReactNode;
