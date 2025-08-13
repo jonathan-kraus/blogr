@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
 import Header from "./Header";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 type Props = {
   children: ReactNode;
@@ -23,6 +24,7 @@ const Layout: React.FC<Props> = (props) => (
       body {
         margin: 0;
         padding: 0;
+        <SpeedInsights />
         font-size: 16px;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
           Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
