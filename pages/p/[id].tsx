@@ -14,10 +14,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
       author: {
         select: { name: true },
       },
-      updatedBy: {
-        
-      },
-    },
+  },
   });
   return {
     props: post,
