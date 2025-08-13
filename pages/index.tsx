@@ -39,7 +39,7 @@ const Blog: React.FC<Props> = (props) => {
       </div>
       <style jsx>{`
         .post {
-          background: white;
+          background: blue;
           transition: box-shadow 0.1s ease-in;
         }
 
