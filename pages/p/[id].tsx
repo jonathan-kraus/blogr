@@ -26,11 +26,14 @@ const Post: React.FC<PostProps> = (props) => {
   if (!props.published) {
     title = `${title} (Draft)`
   }
+const ChildComponent = ({ updatedAt }) => {
+  return <div>{updatedAt}</div>;
+};
 
   return (
     <Layout>
       <div>
-        <h2>{props.updatedAt}</h2>
+        <h2>{ChildComponent}</h2>
         <p>By {props?.author?.name || "Unknown author"}</p>
         <ReactMarkdown children={props.content} />
       </div>
