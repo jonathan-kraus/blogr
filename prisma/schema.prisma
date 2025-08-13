@@ -6,8 +6,8 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-//@@  url="prisma+postgres://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqd3RfaWQiOjEsInNlY3VyZV9rZXkiOiJza193Y2ZRbV9sY2JLN05MNmZWb0RpbjgiLCJhcGlfa2V5IjoiMDFLMkFONTg0S1NDQkRQUDE2SzUwRURUNVciLCJ0ZW5hbnRfaWQiOiJmNDk1MzdlODNkY2UyMDIzNjA1ZWJhOTNmNzczZTU3M2QxMjc4ZThmMDBlYmRiZDlmMDY3ZTYxMTRiZTI1MzY4IiwiaW50ZXJuYWxfc2VjcmV0IjoiMzMyOTFkMWMtMWNkOS00MjI1LWE2MTMtOGU2Yjk3N2EyNDFkIn0.Nhc_pbCfuQ09-CEk41ByFcmgAgZOaXk0hDaqDj2ye6w"
-url      = env("DATABASE_URL")
+  url="prisma+postgres://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqd3RfaWQiOjEsInNlY3VyZV9rZXkiOiJza193Y2ZRbV9sY2JLN05MNmZWb0RpbjgiLCJhcGlfa2V5IjoiMDFLMkFONTg0S1NDQkRQUDE2SzUwRURUNVciLCJ0ZW5hbnRfaWQiOiJmNDk1MzdlODNkY2UyMDIzNjA1ZWJhOTNmNzczZTU3M2QxMjc4ZThmMDBlYmRiZDlmMDY3ZTYxMTRiZTI1MzY4IiwiaW50ZXJuYWxfc2VjcmV0IjoiMzMyOTFkMWMtMWNkOS00MjI1LWE2MTMtOGU2Yjk3N2EyNDFkIn0.Nhc_pbCfuQ09-CEk41ByFcmgAgZOaXk0hDaqDj2ye6w"
+// not working url      = env("DATABASE_URL")
 }
 
 model Post {
