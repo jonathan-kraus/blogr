@@ -11,13 +11,14 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
       id: String(params?.id),
     },
     include: {
-      content: true,
+
       author: {
         select: { name: true },
       },
   },
   });
-  
+  console.log(post);
+  console.log(params.id);
   return {
     props: post,
   };
