@@ -16,7 +16,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
       },
   },
   });
-  console.log(post);
+  console.log(post.createdj);
   return {
     props: post,
   };
