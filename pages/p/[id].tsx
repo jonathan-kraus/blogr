@@ -11,7 +11,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
       id: String(params?.id),
     },
     include: {
-      createdAt: true,
+      content: true,
       author: {
         select: { name: true },
       },
