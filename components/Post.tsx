@@ -10,6 +10,7 @@ export type PostProps = {
     email: string;
   } | null;
   content: string;
+  createdj: string;
   published: boolean;
 };
 
