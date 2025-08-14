@@ -16,6 +16,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
       },
   },
   });
+  console.log(post);
   return {
     props: post,
   };
@@ -31,7 +32,6 @@ const Post: React.FC<PostProps> = (props) => {
     <Layout>
       <div>
         <h2>{title}</h2>
-        console.log(props);
         <p>By {props?.author?.name || "Unknown author"}</p>
         <ReactMarkdown children={props.content} />
       </div>
