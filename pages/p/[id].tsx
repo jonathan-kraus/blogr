@@ -22,7 +22,11 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
     props: post,
   };
 };
-
+function MyButton() {
+  return (
+    <button>I'm a button</button>
+  );
+}
 const Post: React.FC<PostProps> = (props) => {
   let title = props.title
   // console.log(props.createdj)
@@ -36,6 +40,7 @@ const Post: React.FC<PostProps> = (props) => {
         <h2>{title}</h2>
         <p>By {props?.author?.name || "Unknown author"}</p>
         <p>Date {props?.createdj || "Unknown date"}</p>
+        <p><MyButton /></p>
         <ReactMarkdown children={props.content} />
       </div>
       
