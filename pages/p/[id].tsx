@@ -25,7 +25,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
 
 const Post: React.FC<PostProps> = (props) => {
   let title = props.title
-  console.log(props.published)
+  console.log(props.createdj)
   if (!props.published) {
     title = `${title} (Draft)`
   }
