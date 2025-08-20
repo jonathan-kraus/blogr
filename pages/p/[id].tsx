@@ -8,7 +8,7 @@ import prisma from '../../lib/prisma';
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const post = await prisma.post.findUnique({
     where: {
-      id: String(params?.id),
+      id: String(params?.authorId),
     },
     include: {
 
