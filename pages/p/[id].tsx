@@ -24,7 +24,8 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
 };
 function MyButton() {
   return (
-    <button>I'm a button {process.env.MY_SECRET}</button>
+    <button>{process.env.MY_SECRET}</button>
+    <button>{MY_SECRET}</button>
   );
 }
 const Post: React.FC<PostProps> = (props) => {
