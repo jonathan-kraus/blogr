@@ -24,7 +24,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
 };
 function MyButton() {
   return (
-      <button>{MY_SECRET}</button>
+      <button>{DATABASE_URL}</button>
   );
 }
 const Post: React.FC<PostProps> = (props) => {
