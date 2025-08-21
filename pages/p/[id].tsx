@@ -4,6 +4,7 @@ import ReactMarkdown from "react-markdown"
 import Layout from "../../components/Layout"
 import { PostProps } from "../../components/Post"
 import prisma from '../../lib/prisma';
+import { env } from "process"
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const post = await prisma.post.findUnique({
@@ -24,7 +25,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
 };
 function MyButton() {
   return (
-      <button>{DATABASE_URL}</button>
+      <button>{env.MY_SECRET}</button>
   );
 }
 const Post: React.FC<PostProps> = (props) => {
