@@ -5,7 +5,7 @@ import Layout from "../../components/Layout"
 import { PostProps } from "../../components/Post"
 import prisma from '../../lib/prisma';
 import { env } from "process"
-import { Analytics } from "@vercel/analytics/next"
+// import { Analytics } from "@vercel/analytics/next"
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const post = await prisma.post.findUnique({
