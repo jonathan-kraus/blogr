@@ -30,7 +30,7 @@ function MyButton() {
 }
 const Post: React.FC<PostProps> = (props) => {
   let title = props.title
-  let My_sgd = 'Static data'
+  let My_sd = 'Static data'
   // console.log(props.createdj)
   if (!props.published) {
     title = `${title} (Draft)`
