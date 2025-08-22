@@ -30,7 +30,7 @@ function MyButton() {
 }
 const Post: React.FC<PostProps> = (props) => {
   let title = props.title
-  let My_sd = 'Static data'
+  let My_sgd = 'Static data'
   // console.log(props.createdj)
   if (!props.published) {
     title = `${title} (Draft)`
@@ -43,7 +43,7 @@ const Post: React.FC<PostProps> = (props) => {
         <p>By {props?.author?.name || "Unknown author"}</p>
         <p>Date {props?.createdj || "Unknown date"}</p>
         <p><MyButton /></p>
-        <h1>{My_sd}</h1>
+        <h1>{My_sgd}</h1>
         <ReactMarkdown children={props.content} />
       </div>
       
