@@ -43,7 +43,7 @@ const Post: React.FC<PostProps> = (props) => {
         <p>By {props?.author?.name || "Unknown author"}</p>
         <p>Date {props?.createdj || "Unknown date"}</p>
         <p><MyButton /></p>
-        <h1>{My_sd}</h1>
+        <p>{My_sd}</p>
         <ReactMarkdown children={props.content} />
       </div>
       
