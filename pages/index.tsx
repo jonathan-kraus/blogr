@@ -42,7 +42,7 @@ const Blog: React.FC<Props> = (props) => {
           background: blue;
           if (post.id = 1) {
             background: red;
-          }
+          };
           transition: box-shadow 0.1s ease-in;
         }
 
