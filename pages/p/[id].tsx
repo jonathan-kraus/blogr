@@ -40,7 +40,7 @@ const Post: React.FC<PostProps> = (props) => {
     <Layout>
       <div>
         <h2>{title}</h2>
-        <p>By {props?.author?.name || "Unknown author"}</p>
+        <p>Author {props?.author?.name || "Unknown author"}</p>
         <p>Date {props?.createdj || "Unknown date"}</p>
         <p><MyButton /></p>
         <p>{My_sd}</p>
