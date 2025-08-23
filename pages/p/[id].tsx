@@ -28,6 +28,12 @@ function MyButton() {
       <button>A{env.MY_SECRET}B</button>
   );
 }
+function goToNext() {
+  console.log("GTN");
+  return (
+      <p>A</p>
+  );
+}
 const Post: React.FC<PostProps> = (props) => {
   let title = props.title
   let My_sd = 'Static data'
@@ -44,6 +50,7 @@ const Post: React.FC<PostProps> = (props) => {
         <p>Date {props?.createdj || "Unknown date"}</p>
         <p><MyButton /></p>
         <p>{My_sd}</p>
+        <button id="nextButton" onClick={goToNext}>Next</button>
         <ReactMarkdown children={props.content} />
       </div>
       
