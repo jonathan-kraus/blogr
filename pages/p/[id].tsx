@@ -28,15 +28,18 @@ function MyButton() {
       <button>A{env.MY_SECRET}B</button>
   );
 }
+let My_sc = 123;
 function goToNext() {
   console.log("GTN");
+  console.log(My_sc);
+  My_sc = My_sc + 1;
   return (
       <p>A</p>
   );
 }
 const Post: React.FC<PostProps> = (props) => {
   let title = props.title
-  let My_sd = 'Static data'
+  let My_sd = 123
   // console.log(props.createdj)
   if (!props.published) {
     title = `${title} (Draft)`
@@ -50,7 +53,7 @@ const Post: React.FC<PostProps> = (props) => {
         <p>Date {props?.createdj || "Unknown date"}</p>
         <p><MyButton /></p>
         <p>{My_sd}</p>
-        <button id="nextButton" onClick={goToNext}>Next</button>
+        <button id="nextButton" onClick={goToNext}>{My_sc}</button>
         <ReactMarkdown children={props.content} />
       </div>
       
