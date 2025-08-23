@@ -32,7 +32,7 @@ let My_sc = 123;
 function goToNext() {
   console.log("GTN");
   console.log(My_sc);
-  My_sc = My_sc + 1;
+  My_sc += 1;
   return (
       <p>A</p>
   );
