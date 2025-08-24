@@ -1,6 +1,5 @@
 import React, { ReactNode } from "react";
 import Header from "./Header";
-import { Analytics } from '@vercel/analytics/next';
 
 type Props = {
   children: ReactNode;
