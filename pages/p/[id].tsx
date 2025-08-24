@@ -6,6 +6,7 @@ import { PostProps } from "../../components/Post"
 import prisma from '../../lib/prisma';
 import { env } from "process"
 
+export const dynamic = 'force-dynamic';
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const post = await prisma.post.findUnique({
     where: {
@@ -34,7 +35,7 @@ function goToNext() {
   console.log(My_sc);
   My_sc += 1;
   return (
-      <p>A</p>
+      <p>{My_sc}</p>
   );
 }
 const Post: React.FC<PostProps> = (props) => {
