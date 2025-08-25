@@ -23,7 +23,7 @@ import prisma from '../lib/prisma';
 type Props = {
   feed: PostProps[]
 }
-
+export const revalidate = 60 // revalidate every 60 seconds
 const Blog: React.FC<Props> = (props) => {
   return (
     <Layout>
