@@ -5,7 +5,7 @@ import Layout from "../../components/Layout"
 import { PostProps } from "../../components/Post"
 import prisma from '../../lib/prisma';
 import { env } from "process"
-import { type NextRequest, NextResponse } from "next/server"
+//import { type NextRequest, NextResponse } from "next/server"
 
 export const dynamic = 'force-dynamic';
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
@@ -39,18 +39,7 @@ function goToNext() {
       <p>{My_sc}</p>
   );
 }
-export async function POST(request: NextRequest) {
-  const user = await prisma.user.create({
-  data: {
-    id: '1001',
-    createdAt: new Date(),
-    email: 'James@email',
-    name: 'James Porter',
-    updatedAt: new Date(),
-  },
-})
-return NextResponse.json({ user })
-}
+
 const Post: React.FC<PostProps> = (props) => {
   let title = props.title
   let My_sd = 123
