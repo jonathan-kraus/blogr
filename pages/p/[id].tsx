@@ -38,20 +38,12 @@ function goToNext() {
       <p>{My_sc}</p>
   );
 }
-const user = await prisma.user.create({
-  data: {
-    id: '1001',
-    created_at: new Date(),
-    email: 'James@email',
-    name: 'James Porter',
-    updated_at: new Date(),
-  },
-})
+
 
 const Post: React.FC<PostProps> = (props) => {
   let title = props.title
   let My_sd = 123
-  // console.log(props.createdj)
+  console.log(props.createdj)
   if (!props.published) {
     title = `${title} (Draft)`
   }
