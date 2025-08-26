@@ -10,7 +10,9 @@ export const dynamic = 'force-dynamic';
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const post = await prisma.post.findUnique({
     where: {
-      id: String(params?.id),
+      users: {
+        id: String(params?.id),
+      },
     },
     include: {
 
