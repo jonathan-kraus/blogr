@@ -5,6 +5,7 @@ import Layout from "../../components/Layout"
 import { PostProps } from "../../components/Post"
 import prisma from '../../lib/prisma';
 import { env } from "process"
+import { type NextRequest, NextResponse } from "next/server"
 
 export const dynamic = 'force-dynamic';
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
