@@ -43,10 +43,10 @@ export async function POST(request: NextRequest) {
   const user = await prisma.user.create({
   data: {
     id: '1001',
-    created_at: new Date(),
+    createdAt: new Date(),
     email: 'James@email',
     name: 'James Porter',
-    updated_at: new Date(),
+    updatedAt: new Date(),
   },
 })
 return NextResponse.json({ user }, { status: 201 })
