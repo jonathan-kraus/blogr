@@ -49,7 +49,7 @@ export async function POST(request: NextRequest) {
     updatedAt: new Date(),
   },
 })
-return NextResponse.json({ user }, { status: 201 })
+return NextResponse.json({ user })
 }
 const Post: React.FC<PostProps> = (props) => {
   let title = props.title
