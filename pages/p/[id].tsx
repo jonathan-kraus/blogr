@@ -38,8 +38,18 @@ function goToNext() {
       <p>{My_sc}</p>
   );
 }
-
-
+export async function POST(request: NextRequest) {
+  const user = await prisma.user.create({
+  data: {
+    id: '1001',
+    created_at: new Date(),
+    email: 'James@email',
+    name: 'James Porter',
+    updated_at: new Date(),
+  },
+})
+return NextResponse.json({ user }, { status: 201 })
+}
 const Post: React.FC<PostProps> = (props) => {
   let title = props.title
   let My_sd = 123
