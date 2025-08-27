@@ -45,7 +45,7 @@ const Post: React.FC<PostProps> = (props) => {
   let My_sd = 123
   console.log(props.createdj)
   if (!props.published) {
-    title = `${title} (Draft)`
+    title = `{title} (Draft)`
   }
 
   return (
