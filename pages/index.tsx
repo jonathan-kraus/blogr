@@ -81,16 +81,6 @@ async function seedUsers() {
   }
 }
 
-// Run the seeding function
-seedUsers()
-  .then(() => {
-    console.log("[v0] User seeding completed successfully!")
-    process.exit(0)
-  })
-  .catch((error) => {
-    console.error("[v0] User seeding failed:", error)
-    process.exit(1)
-  })
 
 
  export const getStaticProps: GetStaticProps = async () => {
