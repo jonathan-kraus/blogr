@@ -51,10 +51,10 @@ async function seedUsers() {
         const createdUser = await prismac.user.create({
           data: {
             id: user.id,
-            created_at: user.created_at,
+          //  created_at: user.created_at,
             name: user.name,
             email: user.email,
-            updated_at: user.updated_at,
+            //updated_at: user.updated_at,
           },
         })
         createdUsers.push(createdUser)
