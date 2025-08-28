@@ -8,16 +8,16 @@ import { env } from "process"
 //import { type NextRequest, NextResponse } from "next/server"
 
 export const dynamic = 'force-dynamic';
-import { Resend } from 'resend';
+// import { Resend } from 'resend';
 
-const resend = new Resend('re_Tb5DYv3r_L8sAWrfbHGm46eNzkbxyxymo');
+// const resend = new Resend('re_Tb5DYv3r_L8sAWrfbHGm46eNzkbxyxymo');
 
-resend.emails.send({
-  from: 'onboarding@resend.dev',
-  to: 'jonathanckraus@gmail.com',
-  subject: 'Jello World',
-  html: '<p>Congrats on sending your <strong>second email</strong>!</p>'
-});
+// resend.emails.send({
+//   from: 'onboarding@resend.dev',
+//   to: 'jonathanckraus@gmail.com',
+//   subject: 'Jello World',
+//   html: '<p>Congrats on sending your <strong>second email</strong>!</p>'
+// });
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const post = await prisma.post.findUnique({
     where: {
