@@ -8,27 +8,13 @@ import { PrismaClient } from "@prisma/client"
 const prismac = new PrismaClient()
 
 // Sample user data with realistic names and emails
-const userData = [
-  { id: "1116", created_at: "2025-08-29T09:53:09.503+00:00", name: "Liam Garcia",
-    email: "liam.garcia@example.com", updated_at: "2025-08-29T09:53:09.503+00:00" },
-  { id: "1117", created_at: "2025-08-29T09:53:09.503+00:00", name: "Maya Patel",
-    email: "maya.patel@example.com", updated_at: "2025-08-29T09:53:09.503+00:00" },
-  { id: "1118", created_at: "2025-08-29T09:53:09.503+00:00", name: "Noah Rodriguez",
-    email: "noah.rodriguez@example.com", updated_at: "2025-08-29T09:53:09.503+00:00" },
-  { id: "1119", created_at: "2025-08-29T09:53:09.503+00:00", name: "Olivia Thompson",
-    email: "olivia.thompson@example.com", updated_at: "2025-08-29T09:53:09.503+00:00" },
-  { id: "1120", created_at: "2025-08-29T09:53:09.503+00:00", name: "Paul White",
-    email: "paul.white@example.com", updated_at: "2025-08-29T09:53:09.503+00:00" },
-  { id: "1121", created_at: "2025-08-29T09:53:09.503+00:00", name: "Quinn Jackson",
-    email: "quinn.jackson@example.com", updated_at: "2025-08-29T09:53:09.503+00:00" },
-  { id: "1122", created_at: "2025-08-29T09:53:09.503+00:00", name: "Rachel Green",
-    email: "rachel.green@example.com", updated_at: "2025-08-29T09:53:09.503+00:00" },
-  { id: "1123", created_at: "2025-08-29T09:53:09.503+00:00", name: "Sam Kim",
-    email: "sam.kim@example.com", updated_at: "2025-08-29T09:53:09.503+00:00" },
-  { id: "1124", created_at: "2025-08-29T09:53:09.503+00:00", name: "Tina Lopez",
-    email: "tina.lopez@example.com", updated_at: "2025-08-29T09:53:09.503+00:00" },
-  
-
+const PostData = [
+  { id: "3005", authorId: 1111, content: "Description 1",
+    createdj: "08/29/25", Published: true, title: "Test title 1" },
+  { id: "3006", authorId: 1111, content: "Description 2",
+    createdj: "08/29/25", Published: true, title: "Test title 2" },
+  { id: "3007", authorId: 1111, content: "Description 3",
+    createdj: "08/29/25", Published: true, title: "Test title 3" },
 ]
 
 async function seedUsers() {
@@ -43,15 +29,15 @@ async function seedUsers() {
     console.log("[v0] Creating users...")
     const createdUsers = []
 
-    for (const user of userData) {
+    for (const Post of PostData) {
       try {
         const createdUser = await prismac.user.create({
           data: {
-            id: user.id,
-            createdAt: user.created_at,
-            name: user.name,
-            email: user.email,
-            updatedAt: user.updated_at,
+            id: Post.id,
+            createdAt: Post.created_at,
+            name: Post.name,
+            email: Post.email,
+            updatedAt: Post.updated_at,
           },
         })
         createdUsers.push(createdUser)
